@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "outFile": "dist/js/script.js",
+    "target": "es5",
+    "noImplicitAny": false,
+    "sourceMap": false
+  }
+}

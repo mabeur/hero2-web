@@ -1,0 +1,49 @@
+doctype html
+html(lang='en')
+	head
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+		meta(http-equiv='x-ua-compatible', content='ie=edge')
+		link(rel='stylesheet', href='css/styles.css')
+	body
+		nav
+			h1 Web interface for gopro hero2
+				input#password(placeholder="gopro wifi password")
+		main
+			h2 Instructions
+			ol
+				li power on gopro and wifi bacpac
+				li set wifi bacpac in "phone and tablet" mode
+				li connect your computer to your gopro
+				li verify your ip is 10.5.5.109 ( if not force it )
+				li fill the input with bacpac wifi password
+				li run command below
+			-
+				// config http://hobbyrobo.com/gopro-url-commands/
+				var commands = {
+					power: [
+						{name: "turn on", path: "bacpac/PW", param:"%01", description: "" },
+						{name: "turn off", path: "bacpac/PW", param:"%00", description: "" },
+					],
+					mode: [
+						{name: "change mode", path: "bacpac/PW", param:"%02", description: "" },
+					],
+					capture: [
+						{name: "stop capture", path: "bacpac/SH", param:"%00", description: "" },
+						{name: "start capture", path: "bacpac/SH", param:"%01", description: "" },
+					],
+					preview: [
+						{name: "on", path: "bacpac/PV", param:"%02", description: "" },
+						{name: "off", path: "bacpac/PV", param:"%00", description: "" },
+					],
+				}
+
+			h2 Commands
+			each category, name in commands
+				article
+					strong=name
+					each command in category
+						button(data-path=command.path, data-param=command.param)=command.name
+
+
+		script(src='js/script.js')
