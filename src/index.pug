@@ -27,6 +27,11 @@ html(lang='en')
 					],
 					mode: [
 						{name: "change mode", path: "bacpac/PW", param:"%02", description: "" },
+						{name: "Camera", path: "camera/CM", param:"%00", description: "" },
+						{name: "Photo", path: "camera/CM", param:"%01", description: "" },
+						{name: "Burst", path: "camera/CM", param:"%02", description: "" },
+						{name: "Timelapse", path: "camera/CM", param:"%03", description: "" },
+						{name: "Timelapse", path: "camera/CM", param:"%04", description: "" },
 					],
 					capture: [
 						{name: "stop capture", path: "bacpac/SH", param:"%00", description: "" },
@@ -35,6 +40,46 @@ html(lang='en')
 					preview: [
 						{name: "on", path: "bacpac/PV", param:"%02", description: "" },
 						{name: "off", path: "bacpac/PV", param:"%00", description: "" },
+					],
+					orientation: [
+						{name: "up", path: "camera/UP", param:"%00", description: "" },
+						{name: "down", path: "camera/UP", param:"%01", description: "" },
+					],
+					videoResolution: [
+						{name: "WVGA-60", path: "camera/VR", param:"%00", description: "" },
+						{name: "WVGA-120", path: "camera/VR", param:"%01", description: "" },
+						{name: "720-30", path: "camera/VR", param:"%02", description: "" },
+						{name: "720-60", path: "camera/VR", param:"%03", description: "" },
+						{name: "960-30", path: "camera/VR", param:"%04", description: "" },
+						{name: "960-60", path: "camera/VR", param:"%05", description: "" },
+						{name: "1080-30", path: "camera/VR", param:"%06", description: "" },
+					],
+					photoResolution: [
+						{name: "11mp wide", path: "camera/PR", param:"%00", description: "" },
+						{name: "8mp medium", path: "camera/PR", param:"%01", description: "" },
+						{name: "5mp wide", path: "camera/PR", param:"%02", description: "" },
+						{name: "5mp medium", path: "camera/PR", param:"%03", description: "" },
+					],
+					fov: [
+						{name: "wide", path: "camera/FV", param:"%00", description: "" },
+						{name: "medium", path: "camera/FV", param:"%01", description: "" },
+						{name: "narrow", path: "camera/FV", param:"%02", description: "" },
+					],
+					timer: [
+						{name: "0.5sec", path: "camera/TI", param:"%00", description: "" },
+						{name: "1sec", path: "camera/TI", param:"%01", description: "" },
+						{name: "2sec", path: "camera/TI", param:"%02", description: "" },
+						{name: "5sec", path: "camera/TI", param:"%05", description: "" },
+
+					],
+					localisation: [
+						{name: "on", path: "camera/LL", param:"%01", description: "" },
+						{name: "off", path: "camera/LL", param:"%00", description: "" },
+					],
+					bipVolume: [
+						{name: "0%", path: "camera/BS", param:"%00", description: "" },
+						{name: "70%", path: "camera/BS", param:"%01", description: "" },
+						{name: "100%", path: "camera/BS", param:"%02", description: "" },
 					],
 				}
 
